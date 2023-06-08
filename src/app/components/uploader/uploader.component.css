@@ -1,0 +1,23 @@
+.upload-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.file-dropper {
+  margin: 25px;
+  flex: 1;
+  width: 90%;
+}
+.ngx-file-drop-zone {
+  border: 2px;
+}
+.submit-button-container {
+  flex: 1;
+  margin: 25px;
+}
+
+.submit-button {
+  margin: 25px;
+}

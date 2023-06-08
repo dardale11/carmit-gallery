@@ -1,0 +1,27 @@
+<div class="upload-photo-container">
+  <div class="button-container">
+    <button
+      mat-fab
+      color="primary"
+      aria-label="Example icon button with a delete icon"
+      (click)="onRemoveFile()"
+    >
+      <mat-icon>delete</mat-icon>
+    </button>
+  </div>
+  <form [formGroup]="form">
+    <mat-form-field class="title-field">
+      <mat-label>Title</mat-label>
+      <textarea matInput formControlName="title"></textarea>
+    </mat-form-field>
+
+    <mat-form-field class="description-field">
+      <mat-label>Description</mat-label>
+      <textarea matInput formControlName="description"></textarea>
+    </mat-form-field>
+  </form>
+
+  <div class="image-container">
+    <img class="image-view" [src]="imageUrl" [alt]="file.relativePath" />
+  </div>
+</div>

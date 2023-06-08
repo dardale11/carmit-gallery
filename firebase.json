@@ -1,0 +1,9 @@
+{
+  "hosting": [
+    {
+      "target": "carmit-gallery",
+      "source": ".",
+      "frameworksBackend": {}
+    }
+  ]
+}

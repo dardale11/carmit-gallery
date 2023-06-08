@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "carmit-gallery": {
+      "hosting": {
+        "carmit-gallery": [
+          "carmit-gallery"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "carmit-gallery"
+  }
+}

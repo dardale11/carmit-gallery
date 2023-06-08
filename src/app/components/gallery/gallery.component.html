@@ -1,0 +1,19 @@
+<div class="gallery-container">
+  <div class="list-container">
+    <div class="frame" *ngFor="let photo of photos; let i = index">
+      <img
+        (click)="handlePhotoClick(i)"
+        [src]="photo.imageUrl"
+        [alt]="photo.imageUrl"
+      />
+    </div>
+  </div>
+  <div class="modal-container">
+    <app-photo
+      *ngIf="photoView"
+      (closeModal)="handleCloseModal()"
+      (onIndexChange)="handleIndexChange($event)"
+      [photo]="photoView"
+    ></app-photo>
+  </div>
+</div>

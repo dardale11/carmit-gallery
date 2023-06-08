@@ -1,0 +1,36 @@
+<div class="upload-form">
+  <div class="file-dropper">
+    <ngx-file-drop
+      dropZoneLabel="Drop files here"
+      (onFileDrop)="handleFiledrop($event)"
+      (onFileOver)="handleFileOver($event)"
+      (onFileLeave)="handleFileLeave($event)"
+    >
+      <ng-template
+        ngx-file-drop-content-tmp
+        let-openFileSelector="openFileSelector"
+      >
+        Drop Photos or Folders here.
+        <button type="button" (click)="openFileSelector()">Browse Files</button>
+      </ng-template>
+    </ngx-file-drop>
+  </div>
+  <div>
+    <app-upload-photo
+      *ngFor="let file of files"
+      [file]="file"
+      (removeFile)="handleRemoveFile($event)"
+    ></app-upload-photo>
+  </div>
+  <div class="submit-buttom-container">
+    <button
+      mat-raised-button
+      color="primary"
+      class="submit-buttom"
+      *ngIf="files.length != 0"
+      (click)="handleFileUpload()"
+    >
+      upload
+    </button>
+  </div>
+</div>

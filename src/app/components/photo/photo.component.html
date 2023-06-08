@@ -1,0 +1,31 @@
+<div *ngIf="photo" class="photo-view">
+  <fa-icon
+    class="exit-icon"
+    (click)="handleOutsideClick($event)"
+    [icon]="xIcon"
+    size="2xl"
+  ></fa-icon>
+  <div class="image-view">
+    <fa-icon
+      class="arrow-icon"
+      [icon]="leftIcon"
+      size="2xl"
+      (click)="handleBackEvent()"
+    ></fa-icon>
+    <img [src]="photo.imageUrl" [alt]="photo.title" />
+    <fa-icon
+      class="arrow-icon"
+      [icon]="rightIcon"
+      size="2xl"
+      (click)="handleNextEvent()"
+    ></fa-icon>
+  </div>
+  <div class="image-content">
+    <div class="image-title">
+      {{ this.photo.title }}
+    </div>
+    <div class="image-description">
+      {{ this.photo.description }}
+    </div>
+  </div>
+</div>
